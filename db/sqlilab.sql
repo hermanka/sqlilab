@@ -53,6 +53,19 @@ INSERT INTO `users` (`id`, `username`, `password`) VALUES
 	(5, 'eve', 's3cur3e4cc');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    description TEXT
+);
+
+/*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO products (name, description) VALUES
+('Apple iPhone 15', 'The latest model of iPhone with dynamic island.'),
+('Samsung Galaxy S24', 'Flagship Android device with AI features.'),
+('Exploit Test', '<script>alert("XSS test")</script>');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
